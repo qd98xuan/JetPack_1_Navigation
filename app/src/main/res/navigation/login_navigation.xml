@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/login_navigation"
+    app:startDestination="@id/join_us">
+
+    <fragment
+        android:id="@+id/join_us"
+        android:name="com.example.jetpack1navigation."
+        android:label="join_us"
+        tool:layout="@layout/join_us_fragment">
+        <action
+            android:id="@+id/action_join_us_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_join_us_to_join"
+            app:destination="@id/join" />
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.jetpack1navigation."
+        android:label="login"
+        tool:layout="@layout/login_fragment"/>
+    <fragment
+        android:id="@+id/join"
+        android:name="com.example.jetpack1navigation.join"
+        android:label="join"
+        tool:layout="@layout/join_fragment"/>
+</navigation>
